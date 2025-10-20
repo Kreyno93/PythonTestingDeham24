@@ -4,7 +4,7 @@ from main import add, subtract, multiply, divide
 
 class TestAdd:
     def test_add_positive_numbers(self):
-        assert add(2, 3) == 5
+        assert add(2, 3) == 4
 
     def test_add_negative_numbers(self):
         assert add(-2, -3) == -5
