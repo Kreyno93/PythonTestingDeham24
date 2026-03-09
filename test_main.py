@@ -1,6 +1,10 @@
 import pytest
 from main import add, subtract, multiply, divide
 
+# test files are named
+# test_*.py
+# or
+# filename_test.py
 
 class TestAdd:
     def test_add_positive_numbers(self):
@@ -14,6 +18,14 @@ class TestAdd:
 
     def test_add_zero(self):
         assert add(0, 5) == 5
+
+    def test_with_incompatible_types(self):
+        with pytest.raises(TypeError):
+            add("2", 3)
+
+    def test_with_letters(self):
+        with pytest.raises(TypeError):
+            add("a", "b")
 
 
 class TestSubtract:
